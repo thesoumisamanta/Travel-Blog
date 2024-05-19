@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home.jpg')}}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Admin can change the posts anytime</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Basic Actions</h1>
+            <a href="/edit/0"><button class="btn btn-primary">Add a new post</button></a>
+            <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+            <hr>
+            <h1>Upload a file</h1>
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+                <input type="file" name="file1" id="">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+            <hr>
+            <h2>Edit Posts</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">_id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Subtitle</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td>{{ post._id }}</td>
+                        <td>{{ post.title }} - {{ post.timestamp }}</td>
+                        <td>{{ post.sub_title }}</td>
+                        <td><a href="/edit/{{ post._id }}"><button class="btn btn-primary">Edit</button></a></td>
+                        <td><a href="/delete/{{ post._id }}"><button class="btn btn-primary">Delete</button></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock %}

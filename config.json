@@ -1,0 +1,26 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" : "mongodb://localhost:27017/myDetails",
+        "prod_uri" : "mongodb://localhost:27017/myDetails",
+        "tw_url" : "https://twitter.com/thesoumisamanta",
+        "fb_url" : "https://facebook.com/thesoumisamanta",
+        "gh_url" : "https://github.com/thesoumisamanta",
+        "blog_name" : "TSS",
+        "copy_right": "thesoumisamanta",
+        "tag_line" : "A Travel Blog by TSS",
+        "gmail_user" : "myemailid@gmail.com",
+        "gmail_password" : "uhusrnmtayamiehn",
+        "about_text": "Here I will post all About my Travel Vlog and hope you guys will Enjoy",
+        "no_of_posts": 2,
+        "login_image": "logo.jpg",
+        "admin_user": "thesoumisamanta",
+        "admin_password": "password",
+        "upload_location": "D:\\Program\\FLASK\\app 2\\static\\files"
+    }
+}
+
+
+
+

@@ -1,0 +1,46 @@
+.contact {
+    position: relative;
+}
+.paragraph{
+    text-align: center;
+    font-size: 30px;
+}
+.para{
+    text-align: center;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    background-image: url('bg2.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+}
